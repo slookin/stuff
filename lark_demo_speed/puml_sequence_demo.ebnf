@@ -1,0 +1,88 @@
+start: "@startuml"? statement* "@enduml"? "\n"* _multiline_comment? "\n"*
+
+statement: (title|autonumber|participant|collections|_COMMENT|group|alt|opt|else|loop|HEADER|actor|call|note|inline_note|activate|deactivate|_skinparam|_skipped|_hide|_EMPTY_LINE|_multiline_comment)*
+
+title: "title"i TITLE "\n"
+autonumber: "autonumber"i _start? _increment? (STRING|QUOTED_STATEMENT)? "\n"?
+_start: /\d+/
+_increment: /\d+/
+
+TITLE: /[\w\-<>\/\.\ \(\)&]+/
+
+participant: "participant"i participant_name participant_alias? participant_stereotype? COLOR? "\n"
+participant_name: (STRING|QUOTED_STATEMENT)
+participant_alias: "as" ALIAS
+participant_stereotype: "<<"STEREOTYPE">>"
+STEREOTYPE: /\w/+
+ALIAS: /\w/+
+
+collections: "collections"i participant_name participant_alias? participant_stereotype? COLOR? "\n"
+
+actor: "actor"i participant_name participant_alias? participant_stereotype? COLOR? "\n"
+
+call: call_right_answer|call_right|call_left_answer|call_left|call_left_right|call_left_right_answer
+call_right_answer: left_participant "-"_call_color?"->" right_participant ":"? call_message?
+call_right: left_participant "-"_call_color?">" right_participant ":"? call_message?
+call_left_answer: left_participant "<-"_call_color?"-" right_participant ":"? call_message?
+call_left: left_participant "<"_call_color?"-" right_participant ":"? call_message?
+call_left_right: left_participant "<"_call_color?"->" right_participant ":"? call_message?
+call_left_right_answer: left_participant "<-"_call_color?"->" right_participant ":"? call_message?
+
+_call_participant: (STRING_WIHTOUTLINES|QUOTED_STATEMENT)
+left_participant: _call_participant
+right_participant: _call_participant
+call_message: NOTE_MESSAGE_WITHOUT_NEWLINE
+
+
+// @TODO activate/deactivate should be like group
+activate: "activate"i activate_actor
+deactivate: "deactivate"i activate_actor
+activate_actor: _call_participant
+
+
+group: "group"i /(.)+/ statement* group_end
+group_end: /^[\t ]*end(\ group)?\n?/mi
+loop: "loop"i /(.)+/ statement*   "end"i "loop"i?
+alt: "alt"i alt_condition? (statement)* "end"i "alt"i?
+alt_condition: /(.)+/
+opt: "opt"i /(.)+/ statement* opt_end
+opt_end: /^[\t ]*end(\ opt)?\n?/mi
+else: else_begin ELSE_CONDITION? "\n"
+else_begin: /^[\t\ ]*else/mi
+
+note: note_begin note_location?"\n" note_message note_end
+note_begin: /^[\t ]*note/mi
+note_location: /.+/
+// hack: note_end should have higher priority than note_message
+note_end.10: /^[\t ]*end(\ note)?\n?/mi
+note_message.0: (NOTE_MESSAGE_WITHOUT_NEWLINE?"\n")*
+
+inline_note: "note"i NOTE_MESSAGE_WITHOUT_NEWLINE? "\n"
+// inline_note: /^\s*note/i NOTE_MESSAGE_WITHOUT_NEWLINE "\n"
+
+_skipped: "..." "\n"
+_skinparam: "skinparam"i STRING_WITH_SPACE"\n"
+_hide: "hide"i STRING_WITH_SPACE"\n"
+
+_call_color: /\[#......\]/
+
+HEADER: /==.*?==/
+
+STRING: /[\w\-<>\/]+/
+STRING_WITH_SPACE: /[\w\-<>\/\ \|\t]+/
+STRING_WIHTOUTLINES: /\w+/
+QUOTED_STATEMENT: /"[^\n]*"/
+ELSE_CONDITION: NOTE_MESSAGE_WITHOUT_NEWLINE
+NOTE_MESSAGE_WITHOUT_NEWLINE:/[\w\-<>\/ \t\|,":()*#$%@?&=\.\[\]\{\}\+;\\!]+/
+
+_multiline_comment:  /\/'(.|\n)+\'\//
+
+COLOR: /#.+/
+_EMPTY_LINE: /\s*/"\n"|"\r\n"
+_COMMENT: /\'.*/
+
+
+%import common.WS_INLINE
+%ignore WS_INLINE
+//%ignore __EMPTY_LINE
+%ignore _COMMENT

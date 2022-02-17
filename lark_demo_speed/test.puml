@@ -1,0 +1,371 @@
+autonumber "IV-5-[00]"
+
+actor "Client" as CL
+participant BFF as BFF
+participant "Identity Verification" as IV #White
+participant "Shopping Cart" as SC #White
+participant "Product Validation" as PALIAS #Aqua
+participant "IV API" as IVA #Aqua
+participant "Important Actor" as PA #Aqua
+'participant "Important Actor 2" as PMALIAS #Aqua
+'participant "Important Actor 3" as PM #Aqua
+participant "Important Actor 4" as PO #Aqua
+participant "Actor" as BE
+participant "ACTOR" as IDS #LightGreen
+participant "ACTORACTOR" as NID 
+
+alt user starts flow -
+
+	opt user is logged in		
+
+		note over BFF, PA #lightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+		end note
+		BFF -> PA: GET/message
+		PA<->BE: get Party information
+		PA -> BFF: 200, data
+
+		opt #lightgreen FF=ON
+			
+			BFF -> IVA: POST /dsfdsf/ dsfsdfs
+			IVA <-> BE: Get data
+		
+			alt #lightgreen Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+ 				BFF <- IVA: 200,  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  				note over CL, BFF  #lightBlue
+   				 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+     			 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+				 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+ 				end note 
+			else #lightgreen  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+				IVA -> BFF: 200,data
+ 				note over CL, BFF  #lightBlue
+   				 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+   				  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+   				   Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+ 				end note 
+			end
+		end	opt
+	end opt
+
+	note over CL,BFF #lightBlue
+		 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end note
+
+	OA-->BFF:  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+
+	note over BFF, PA #lightBlue
+	 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end note
+	BFF->PALIAS:POST / Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	PALIAS<->BE: 200, data | Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	PALIAS->BFF: 200, data
+	opt#lightBlue Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end
+
+	alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over BFF,BE #LightBlue
+   		for  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+
+		alt #lightGreen  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			BFF<-> PA: PATCH / Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		else 
+			BFF<->PA: POST  /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end alt
+
+		alt #lightGreen  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			BFF -> PA: PATCH  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			PA<->BE: g Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			PA -> BFF: 200,  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		else  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			note over BFF,BE #LightBlue
+			C Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note	
+		end alt
+	else  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  		note over BFF,BE #lightBlue
+    	 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+    	  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  		end note
+  		note over BFF,BE #LightBlue
+    	 Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  		end note
+  		BFF -> PA: POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  		PA <-> BE: data 
+  		PA -> BFF: data
+		note right BFF#lightGreen: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		BFF<->PA: POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end
+
+else uLorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+
+	note over CL,BE #LightBlue
+    fLorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+    Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end note
+
+end
+
+'Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+==Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),==
+
+note over CL,BE #LightBlue
+Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+end note
+
+opt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+
+'note overLorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'TBD POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'end note
+
+	BFF -> IVA: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	IVA <-> BE: /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	IVA -> BFF: 200,data
+
+	alt (Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),)
+		BFF -> IVA: POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		IVA <-> BE: Get data
+		IVA -> BFF: data
+	else #lightGreen (Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),)
+		note over CL,BFF #Lightblue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+
+	end
+end 
+
+opt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+
+'note over BFF,HAL #LightBlue
+'Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'end note
+'alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'note over BFF,BE #LightBlue
+'Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'end note
+
+	BFF -> IVA: POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	IVA <-> BE: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	IVA -> BFF: data
+
+	opt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+
+		note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+		BFF -> IVA: GET /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		IVA <-> BE: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		IVA -> BFF: data
+		BFF-> CL: data
+	else #lightGreen Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over CL,BFF #lightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end note
+
+	end
+
+'else #whiteLorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'	BFF-> CL: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'	note over BFF,BE #LightBlue
+'	Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'   Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'	end note 
+
+	OA -> BFF: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	alt  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over BFF, BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+
+		BFF -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		IV -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IV -> IDS: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IDS -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IV -> BFF: data
+		else Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IV -> BFF: data
+		end 
+		note over BFF, BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+		BFF -> IVA: POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		IVA <-> BE: data 
+		IVA -> BFF: 200, data
+		OA <-> IDS:Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		IDS -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'BFF -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'IV -> BFF: 200, data
+'group  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over IV, BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+'	IV-> IVA: PATCH /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'	IVA <-> BE: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'	IVA -> IV: 200 data
+		IV -> BFF: 200 data
+'end
+'OA -> BFF: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'BFF -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'IV -> BFF: data
+
+		alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			BFF -> IV: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			loop retry until Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+				note over BFF,BE #LightBlue
+      			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  				end note
+  				IV <-> IDS: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end loop
+		else ILorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IV-> IVA: PATCH /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IVA <-> BE: update verifications
+  			IVA -> IV: 200 data
+  			IV -> BFF: ok
+		end
+
+	else  Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+
+		OA -> BFF: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			BFF -> IVA : POST /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+  			IVA <-> BE: data
+  			alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+    			IVA -> BFF: 200 Ok
+  			else ident NOK
+    			note over BFF,NID #LightBlue
+      			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+    			end note
+  			end
+		end
+
+		BFF -> CL: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'group Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		OA --> NID: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over BFF,NID #LightBlue
+             Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+		NID->BE: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		NID--> CL: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'end
+'opt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'  CL -> BFF: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'  BFF -> IVA: PATCH/Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'  IVA <-> BE: data
+'  IVA -> BFF:  data
+
+	end
+
+end
+'------------------------------------
+note over BFF,PA #LightBlue
+Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+      -Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+      -Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+      -Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+end note
+
+opt - Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	BFF -> CL: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	end note
+	opt #lightGreen Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		BFF->PA: GET /parties/id
+		PA<->BE: GET /parties/id
+		PA->BFF: 200
+	autonumber stop
+	BFF<-->OA: Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+	autonumber resume
+end
+	alt user is Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+	else user is on 'Register Service' flow
+		note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+
+'	note over BFF,BE #LightBlue
+'		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+'	end note
+    
+    	OA -> BFF: ULorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+    	BFF -> IVA: PATCH /Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+    	IVA <-> BE: 200
+    	IVA -> BFF: 200
+    	BFF -> CL: 200
+	end 
+
+	else - ILorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		BFF -> CL: data
+		note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note
+		alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			note over BFF,BE #LightBlue 
+			for Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		    Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note
+			note over BFF,BE #LightBlue 
+				Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+				Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+				CLorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note
+		else user is Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			note over BFF,BE #LightBlue
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note
+		end
+
+	else - Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		end note 
+		BFF -> CL: data
+	
+		alt Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			note over BFF,BE #LightBlue
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+		Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note 
+		else user is Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			note over BFF,BE #LightBlue
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note 
+			note over BFF,BE #LightBlue
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note
+			note over BFF,BE #LightBlue
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			Lorem ipsum dolor sit amet, consectetur adipiscing (/elit),
+			end note
+		end
+	end
+
+==Lorem ipsum dolor sit amet, /  consectetur adipiscing elit,==
+	alt#lightGreen Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+		note over CL,BE #LightGreen
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+		end note
+		OA--> BFF		
+		BFF -> PO: POST /message
+		PO <-> BE: data 
+    	PO -> BFF: 200
+		BFF--> CL
+	end
+@enduml
+
