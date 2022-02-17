@@ -10,8 +10,11 @@ Execution script: demo_lark.py
 # Result output
 
 grammar loaded
+
 parsing...
+
 parsing end
+
 --- 146.90821170806885 seconds ---
 
 
