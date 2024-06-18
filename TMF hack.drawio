@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-18T11:55:13.676Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="Z0-nRgZSnJ5LWki4PoCz" version="24.5.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-18T12:33:27.434Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="gg_XEBmuO4HIWRuSBpP2" version="24.5.4" type="github">
   <diagram name="Seite-1" id="CGUBHcrXT41bl0SBza2R">
     <mxGraphModel dx="1909" dy="1013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -43,7 +43,7 @@
         <mxCell id="9F9rbnI__Y2UDNDiaR7V-17" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="380" y="610" width="420" height="420" as="geometry" />
         </mxCell>
-        <mxCell id="9F9rbnI__Y2UDNDiaR7V-18" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Custom Agent on top of Vertax&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="9F9rbnI__Y2UDNDiaR7V-18" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Custom Agent on top of Vertex&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="410" y="620" width="350" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9F9rbnI__Y2UDNDiaR7V-19" value="Information retrieval tool" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
