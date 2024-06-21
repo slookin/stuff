@@ -1,50 +1,50 @@
-<mxfile host="app.diagrams.net" modified="2024-06-18T14:37:25.466Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="XtwtCqv8yoErBhqnQBXj" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-21T20:00:16.082Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="dF7zbNrs3NoVZ4piq1Yu" version="24.6.0" type="github">
   <diagram name="Seite-1" id="0VJdLC_J9bLSd-ELZ-hq">
     <mxGraphModel dx="1050" dy="557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-3" value="Persona" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="70" y="60" width="30" height="60" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-3" value="Persona" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+          <mxGeometry x="80" y="210" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-5" value="Use native language to describe his use case" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="60" width="160" height="80" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-5" value="Use native language to describe his use case" style="rounded=1;whiteSpace=wrap;html=1;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="10" y="300" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-6" value="TMF AIVA recommend TMF Open API specification for this Use Case" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="170" width="160" height="70" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-6" value="TMF AIVA recommend TMF Open API specification for this Use Case" style="rounded=1;whiteSpace=wrap;html=1;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="207" y="300" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-8" value="Recieve List of recommended API from DT Catalog" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="370" width="160" height="70" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-8" value="Recieve List of recommended API from DT Catalog" style="rounded=1;whiteSpace=wrap;html=1;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="600" y="300" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-9" value="Use TMF Open API artifacts (user guide, specification) for search in DT API Catalog" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="270" width="160" height="70" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-9" value="Use TMF Open API artifacts (user guide, specification) for search in DT API Catalog" style="rounded=1;whiteSpace=wrap;html=1;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="403" y="300" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-10" value="Persona" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="70" y="360" width="30" height="60" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-10" value="Persona" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+          <mxGeometry x="680" y="210" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="0lLUbN52D8RDaP7WbQPi-6">
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-11" value="" style="endArrow=classic;html=1;rounded=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" target="0lLUbN52D8RDaP7WbQPi-6" edge="1" source="0lLUbN52D8RDaP7WbQPi-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="240" y="140" as="sourcePoint" />
-            <mxPoint x="440" y="270" as="targetPoint" />
+            <mxPoint x="90" y="380" as="sourcePoint" />
+            <mxPoint x="290" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-13" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="0lLUbN52D8RDaP7WbQPi-9">
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-13" value="" style="endArrow=classic;html=1;rounded=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" target="0lLUbN52D8RDaP7WbQPi-9" edge="1" source="0lLUbN52D8RDaP7WbQPi-6">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="240" y="240" as="sourcePoint" />
-            <mxPoint x="440" y="270" as="targetPoint" />
+            <mxPoint x="90" y="480" as="sourcePoint" />
+            <mxPoint x="290" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="0lLUbN52D8RDaP7WbQPi-9" target="0lLUbN52D8RDaP7WbQPi-8">
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="0lLUbN52D8RDaP7WbQPi-9" target="0lLUbN52D8RDaP7WbQPi-8" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="320" as="sourcePoint" />
-            <mxPoint x="440" y="270" as="targetPoint" />
+            <mxPoint x="560" y="350" as="sourcePoint" />
+            <mxPoint x="290" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-15" value="TMF AIVA" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="55" y="190" width="60" height="30" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-15" value="TMF AIVA" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+          <mxGeometry x="260" y="260" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="0lLUbN52D8RDaP7WbQPi-16" value="Vertex Search Agent" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="30" y="290" width="120" height="30" as="geometry" />
+        <mxCell id="0lLUbN52D8RDaP7WbQPi-16" value="Vertex Search Agent" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;textShadow=0;shadow=0;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+          <mxGeometry x="430" y="260" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
